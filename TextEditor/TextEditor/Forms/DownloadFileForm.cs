@@ -31,7 +31,7 @@ namespace TextEditor
                 using (var dbService = _unityContainer.Resolve<IDbService>())
                 {
                     IRepo<File> repo = dbService.Repo<File>();
-                    var files = await repo.GetAllFileName();
+                    var files = await repo.GetAll();
 
                     foreach (var item in files)
                     {

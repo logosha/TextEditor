@@ -18,7 +18,7 @@ namespace Core.DBService
             _dbSet = _dbContext.Set<TEntity>();
         }
 
-        public async Task<IEnumerable<TEntity>> GetAllFileName()
+        public async Task<IEnumerable<TEntity>> GetAll()
         {
             return await _dbSet.ToListAsync();
         }
